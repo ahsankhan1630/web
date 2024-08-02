@@ -183,3 +183,34 @@ span{
     font-size: 40px;
     margin-bottom: 30px;
 }
+.gallery {
+    display: grid;
+    gap: 10px; /* Space between images */
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    max-width: 1200px; /* Max width for the gallery */
+    margin: 0 auto; /* Center the gallery */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Optional: add some rounded corners */
+    object-fit: cover; /* Ensure images cover the item area */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust column size on smaller screens */
+        gap: 5px; /* Reduce gap on smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Stack images in a single column on very small screens */
+        gap: 5px; /* Maintain reduced gap */
+    }
+}
