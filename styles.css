@@ -194,7 +194,7 @@ span{
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 400px;
     display: block;
     border-radius: 8px; /* Optional: add some rounded corners */
     object-fit: cover; /* Ensure images cover the item area */
